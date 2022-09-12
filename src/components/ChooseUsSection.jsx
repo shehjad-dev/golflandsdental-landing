@@ -3,7 +3,7 @@ import CircleTeethIcon from "../assets/CircleTeethIcon.svg";
 
 const ChooseUsSection = () => {
     return (
-        <section className="bg-[#033B62] sm:pb-20 pb-10">
+        <section className="bg-[#033B62] sm:pb-6 pb-6">
             <div className="px-4 pt-12 md:pb-12 pb-0 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24 md:scroll-mt-16 scroll-mt-14 flex items-center flex-col">
                 <h3 className="text-center sm:text-3xl text-2xl text-white font-bold tracking-wide">
                     Why Choose Us?

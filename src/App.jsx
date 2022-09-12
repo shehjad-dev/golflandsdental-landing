@@ -27,7 +27,10 @@ function App() {
             <Footer />
 
             <div className="relative container">
-                <a className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 p-2 rounded-full z-50">
+                <a
+                    className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 p-2 rounded-full z-50"
+                    href="tel:080046533368"
+                >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

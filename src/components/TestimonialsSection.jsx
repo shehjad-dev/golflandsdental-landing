@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
                         </a>
                     </button>
                 </div>
-                <div className="flex items-center justify-center mt-8">
+                <div className="flex items-center justify-center mt-8 mb-6">
                     <p className="text-[#0A629C] font-medium text-base">
                         Powered by
                     </p>
