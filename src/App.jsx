@@ -1,5 +1,11 @@
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
+import DetailsSection from "./components/DetailsSection";
+import AdvantagesSection from "./components/AdvantagesSection";
+import ChooseUsSection from "./components/ChooseUsSection";
+import TestimonialsSection from "./components/TestimonialsSection";
+import MapsSection from "./components/MapsSection";
+import Footer from "./components/Footer";
 import { useState } from "react";
 import "./App.css";
 
@@ -8,16 +14,20 @@ function App() {
 
     return (
         <div className="App">
-            <div className=" shadow-md">
+            <div className="shadow-md">
                 <Navbar />
             </div>
 
             <HeroSection />
-            <h1 className="text-3xl font-bold underline hover:text-violet-400 transition-all duration-150">
-                Hello world!
-            </h1>
+            <DetailsSection />
+            <AdvantagesSection />
+            <ChooseUsSection />
+            <TestimonialsSection />
+            <MapsSection />
+            <Footer />
+
             <div className="relative container">
-                <a className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 p-2 rounded-full">
+                <a className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 p-2 rounded-full z-50">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
