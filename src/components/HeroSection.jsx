@@ -1,20 +1,92 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
 import heroOptimized from "../assets/heroOptimized.webp";
 
 const HeroSection = () => {
+    const notyf = new Notyf({
+        duration: 2000,
+        dismissible: true,
+        position: {
+            x: "left",
+            y: "bottom",
+        },
+    });
+
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [date, setDate] = useState("");
     const [time, setTime] = useState("");
+    const [forcedTime, setForcedTime] = useState("");
+
+    const handleTimeChange = (currentTime) => {
+        var [h, m] = currentTime.split(":");
+        const finalTime =
+            ((h % 12) + 12 * (h % 12 == 0) + ":" + m,
+            h >= 12 ? `${h - 12}:${m} PM` : `${Number(h).toString()}:${m} AM`);
+        setForcedTime(currentTime);
+
+        setTime(finalTime);
+    };
 
     const handleSubmit = () => {
-        console.log(formData);
-        console.log(name);
-        console.log(phone);
-        console.log(email);
-        console.log(date);
-        console.log(time);
+        const phoneReg = /^\d+$/;
+        const emailReg = /^([a-zA-Z0-9]\.?)+[^\.]@([a-zA-Z0-9]\.?)+[^\.]$/;
+        //console.log(name, phone, email, date, time);
+
+        //notyf.error("We will contact you soon");
+
+        if (
+            name === "" ||
+            email === "" ||
+            phone === "" ||
+            date === "" ||
+            time === ""
+        ) {
+            notyf.error("Please fill out the form");
+            //console.log("Please Fill all the field");
+        } else if (!phoneReg.test(phone)) {
+            notyf.error("Please input a valid phone no.");
+            //console.log("Please enter only numbers as phone");
+        } else if (!emailReg.test(email)) {
+            notyf.error("Please enter a valid email");
+            //console.log("Please enter a valid email");
+        } else {
+            const data = {
+                Name: name.toString(),
+                Phone: phone.toString(),
+                Email: email.toString(),
+                Date: date.toString(),
+                Time: time.toString(),
+            };
+
+            axios
+                .post(`https://sheetdb.io/api/v1/${API_KEY}`, {
+                    data,
+                })
+                .then((response) => {
+                    //console.log(response.data);
+                    setName("");
+                    setPhone("");
+                    setEmail("");
+                    setDate("");
+                    setTime("");
+                    setForcedTime("");
+                    notyf.success("We will contact you soon");
+                })
+                .catch((err) => {
+                    //console.log(err);
+                    setName("");
+                    setPhone("");
+                    setEmail("");
+                    setDate("");
+                    setTime("");
+                    setForcedTime("");
+                    notyf.error("There was an error!");
+                });
+        }
     };
 
     return (
@@ -55,6 +127,7 @@ const HeroSection = () => {
                                 name="name"
                                 className="w-full bg-[#d8efff] rounded border border-gray-300 focus:border-[#00AEEF] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-[#033B62] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder:text-[#47B3FF]"
                                 placeholder="Enter your Name"
+                                value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
                         </div>
@@ -71,6 +144,7 @@ const HeroSection = () => {
                                 name="phone"
                                 className="w-full bg-[#d8efff] rounded border border-gray-300 focus:border-[#00AEEF] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-[#033B62] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder:text-[#47B3FF]"
                                 placeholder="Enter your Phone"
+                                value={phone}
                                 onChange={(e) => setPhone(e.target.value)}
                             />
                         </div>
@@ -87,6 +161,7 @@ const HeroSection = () => {
                                 name="email"
                                 className="w-full bg-[#d8efff] rounded border border-gray-300 focus:border-[#00AEEF] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-[#033B62] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder:text-[#47B3FF]"
                                 placeholder="Enter your Email"
+                                value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                         </div>
@@ -104,6 +179,7 @@ const HeroSection = () => {
                                     id="date"
                                     name="date"
                                     className="w-full bg-[#d8efff] rounded border border-gray-300 focus:border-[#00AEEF] focus:ring-2 focus:ring-indigo-200 text-l outline-none text-[#033B62] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder:text-[#47B3FF]"
+                                    value={date}
                                     onChange={(e) => setDate(e.target.value)}
                                 />
                             </div>
@@ -119,7 +195,10 @@ const HeroSection = () => {
                                     id="time"
                                     name="time"
                                     className="w-full bg-[#d8efff] rounded border border-gray-300 focus:border-[#00AEEF] focus:ring-2 focus:ring-indigo-200 text-base outline-none text-[#033B62] py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder:text-[#47B3FF]"
-                                    onChange={(e) => setTime(e.target.value)}
+                                    value={forcedTime}
+                                    onChange={(e) =>
+                                        handleTimeChange(e.target.value)
+                                    }
                                 />
                             </div>
                         </div>

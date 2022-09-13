@@ -20,7 +20,7 @@ const AdvantagesSection = () => {
                             </p>
                         </span>
 
-                        <p className="xl:mb-0 sm:mb-[0rem] mb-[0] sm:text-base leading-relaxed text-left text-[#A4DBFF] max-w-sm text-[0.9rem]">
+                        <div className="xl:mb-0 sm:mb-[0rem] mb-[0] sm:text-base leading-relaxed text-left text-[#A4DBFF] max-w-sm text-[0.9rem]">
                             <ul className="list-disc text-[#0D75BC] list-inside pl-[4px]">
                                 <li>Permanent fixed solution.</li>
                                 <li>Maintains bone height.</li>
@@ -35,7 +35,7 @@ const AdvantagesSection = () => {
                                     Eating and speaking becomes normal again.
                                 </li>
                             </ul>
-                        </p>
+                        </div>
                     </div>
                     <div className="lg:max-w-lg md:w-1/2 w-[75%]  rounded-xl sm:ml-8 ml-0">
                         <div className="">
