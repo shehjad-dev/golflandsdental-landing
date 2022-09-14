@@ -32,9 +32,10 @@ const HeroSection = () => {
     };
 
     const handleSubmit = () => {
-        const phoneReg = /^\d+$/;
+        //const phoneReg = /^\d+$/;
+        const phoneReg = /^(\+)?(64)?[0-9]+$/;
         const emailReg = /^([a-zA-Z0-9]\.?)+[^\.]@([a-zA-Z0-9]\.?)+[^\.]$/;
-        //console.log(name, phone, email, date, time);
+        console.log(name, phone, email, date, time.toString());
 
         //notyf.error("We will contact you soon");
 
@@ -58,14 +59,18 @@ const HeroSection = () => {
                 Name: name.toString(),
                 Phone: phone.toString(),
                 Email: email.toString(),
-                Date: date.toString(),
-                Time: time.toString(),
+                Date: date,
+                Time: time,
             };
 
             axios
-                .post(`https://sheetdb.io/api/v1/${API_KEY}`, {
-                    data,
-                })
+                .post(
+                    `https://sheetdb.io/api/v1/${API_KEY}
+                `,
+                    {
+                        data,
+                    }
+                )
                 .then((response) => {
                     //console.log(response.data);
                     setName("");
