@@ -65,7 +65,7 @@ const HeroSection = () => {
 
             axios
                 .post(
-                    `https://sheetdb.io/api/v1/${API_KEY}
+                    `https://sheetdb.io/api/v1/5lq2ndm34p46a
                 `,
                     {
                         data,
@@ -97,14 +97,45 @@ const HeroSection = () => {
     return (
         <div className="" id="top">
             <section className="text-gray-600 body-font relative md:mb-14 scroll-smooth">
+                <div className="text-center">
+                    <h3 className="block text-center sm:text-2xl text-xl font-bold text-[#0A629C] sm:w-[18rem] w-[14rem] mx-auto mb-3 mt-4 leading-6">
+                        <span className="text-[#033B62]">Dental Implant</span>{" "}
+                        surgery only at{" "}
+                        <span className="text-[#033B62]">$3900.</span>
+                    </h3>
+                    <a
+                        className="w-fit mx-auto cursor-pointer flex items-center justify-center animate-bounce hover:bg-blue-200 bg-white py-2 px-4 rounded-3xl transition-all ease-in duration-75"
+                        href="#form"
+                    >
+                        <span className="text-[#0A629C] font-medium">
+                            Book Free Consultation
+                        </span>
+                        <span className="text-[#033B62] ml-[0.25rem]">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="w-5 h-5"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+                                />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
                 <div className="container sm:px-5 px-2 md:py-10 py-6 pb-10 mx-auto flex items-center justify-center md:gap-14 gap-0 sm:flex-nowrap flex-wrap">
                     <div className="flex flex-col items-center md:items-start md:justify-start justify-center">
-                        <div className="lg:w-64 w-52 relative mt-4">
+                        <div className="lg:w-64 w-52 relative mt-4 bg-red-500">
                             <div className="lg:w-64 w-52 lg:h-[24rem] h-[18.4rem] bg-[#98C4E2] absolute top-[-1.4rem] left-[1.4rem] z-10"></div>
-                            <div>
+                            <div className="lg:w-64 w-52 lg:h-[24rem] h-[18.4rem] top-0 left-0 bg-[#0A629C]">
                                 <img
                                     src={heroOptimized}
-                                    alt=""
+                                    alt="Img of a Dental Patient at Golflands Dental"
                                     className="z-50 relative top-0 left-0 w-full h-auto"
                                 />
                             </div>
@@ -114,7 +145,10 @@ const HeroSection = () => {
                             Your teeths deserve the perfect smile.
                         </p>
                     </div>
-                    <div className="lg:w-1/3 md:w-1/2 bg-[#0A629C] flex flex-col w-full md:py-8 mt-8 md:mt-0 rounded-xl sm:py-8 py-5 sm:px-6 px-4 shadow-lg">
+                    <div
+                        className="lg:w-1/3 md:w-1/2 bg-[#0A629C] flex flex-col w-full md:py-8 mt-8 md:mt-0 rounded-xl sm:py-8 py-5 sm:px-6 px-4 shadow-lg scroll-mt-5"
+                        id="form"
+                    >
                         <h3 className="text-white text-xl mb-1 font-bold tracking-wide title-font text-center">
                             Appointment Form
                         </h3>

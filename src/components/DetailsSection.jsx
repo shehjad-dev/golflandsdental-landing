@@ -36,7 +36,7 @@ const DetailsSection = () => {
                                 <div className="relative">
                                     <img
                                         src={DetailsImage}
-                                        alt=""
+                                        alt="Dental Implant Details Image"
                                         className=""
                                     />
                                 </div>

@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import DetailsSection from "./components/DetailsSection";
 import AdvantagesSection from "./components/AdvantagesSection";
 import ChooseUsSection from "./components/ChooseUsSection";
+import BeforeAfterSection from "./components/BeforeAfterSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import MapsSection from "./components/MapsSection";
 import Footer from "./components/Footer";
@@ -22,6 +23,7 @@ function App() {
             <DetailsSection />
             <AdvantagesSection />
             <ChooseUsSection />
+            <BeforeAfterSection />
             <TestimonialsSection />
             <MapsSection />
             <Footer />
