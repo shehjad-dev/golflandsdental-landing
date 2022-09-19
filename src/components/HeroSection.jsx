@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
-import heroOptimized from "../assets/heroOptimized.webp";
+import heroOptimizedMax from "../assets/heroOptimizedMax.webp";
 
 const HeroSection = () => {
     const notyf = new Notyf({
@@ -98,10 +98,15 @@ const HeroSection = () => {
         <div className="" id="top">
             <section className="text-gray-600 body-font relative md:mb-14 scroll-smooth">
                 <div className="text-center">
-                    <h3 className="block text-center sm:text-2xl text-xl font-bold text-[#0A629C] sm:w-[18rem] w-[14rem] mx-auto mb-3 mt-4 leading-6">
-                        <span className="text-[#033B62]">Dental Implant</span>{" "}
+                    <h3 className="block text-center sm:text-2xl text-xl font-bold text-[#033B62] sm:w-[18rem] w-[14rem] mx-auto mb-3 mt-4 leading-6">
+                        {/* <h3 className="block text-center sm:text-2xl text-xl font-bold text-[#0A629C] sm:w-[18rem] w-[14rem] mx-auto mb-3 mt-4 leading-6"> */}
+                        {/* Please make it “Dental Implant + Crown only at 3900” */}
+                        <span className="text-[#033B62]">Dental Implant</span> +{" "}
+                        <span className="text-[#033B62]">Crown </span>
+                        only at <span className="text-[#033B62]">$3900</span>
+                        {/* <span className="text-[#033B62]">Dental Implant</span>{" "}
                         surgery only at{" "}
-                        <span className="text-[#033B62]">$3900.</span>
+                        <span className="text-[#033B62]">$3900.</span> */}
                     </h3>
                     <a
                         className="w-fit mx-auto cursor-pointer flex items-center justify-center animate-bounce hover:bg-blue-200 bg-white py-2 px-4 rounded-3xl transition-all ease-in duration-75"
@@ -134,15 +139,15 @@ const HeroSection = () => {
                             <div className="lg:w-64 w-52 lg:h-[24rem] h-[18.4rem] bg-[#98C4E2] absolute top-[-1.4rem] left-[1.4rem] z-10"></div>
                             <div className="lg:w-64 w-52 lg:h-[24rem] h-[18.4rem] top-0 left-0 bg-[#0A629C]">
                                 <img
-                                    src={heroOptimized}
+                                    src={heroOptimizedMax}
                                     alt="Img of a Dental Patient at Golflands Dental"
-                                    className="z-50 relative top-0 left-0 w-full h-auto"
+                                    className="z-50 relative top-0 left-0 w-full h-full"
                                 />
                             </div>
                         </div>
 
-                        <p className="md:text-base text-[#656668] mt-3 font-semibold md:text-left text-center">
-                            Your teeths deserve the perfect smile.
+                        <p className="md:text-base text-[0.9rem] text-[#5f6061] sm:mt-3 mt-6 font-medium md:text-left text-center sm:font-semibold">
+                            Your deserve the perfect smile.
                         </p>
                     </div>
                     <div
