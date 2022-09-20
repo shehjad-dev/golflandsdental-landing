@@ -8,12 +8,12 @@ const AdvantagesSection = () => {
             <div className="px-4 pt-12 md:pb-12 pb-0 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24 md:scroll-mt-16 scroll-mt-14">
                 <div className="flex md:flex-row flex-col-reverse mx-auto max-w-4xl items-center justify-center">
                     <div className="flex flex-col items-start justify-center lg:mt-0 mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 md:mb-0 xl:mt-0">
-                        <span className="xl:mb-4 sm:mb-4 mb-4 text-xs font-bold tracking-widest flex sm:items-center items-start justify-center">
+                        <span className="xl:mb-4 sm:mb-4 mb-4 text-xs font-bold tracking-widest flex sm:items-center items-center justify-center">
                             {" "}
                             <img
                                 src={FlashIcon}
                                 alt="Teeth Flash Icon"
-                                className="text-blue-500 sm:w-10 h-auto mr-2 w-7 sm:mt-0 mt-[5px]"
+                                className="text-blue-500 sm:w-10 h-auto mr-2 w-7 sm:mt-0 mt-[0px]"
                             />
                             <p className="text-[#033B62] sm:text-xl text-base">
                                 Advantages of Dental Implants

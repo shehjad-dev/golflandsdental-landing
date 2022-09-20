@@ -30,7 +30,7 @@ function App() {
 
             <div className="relative container">
                 <a
-                    className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 p-2 rounded-full z-50"
+                    className="bg-[#ADE8FA] border-[1.4px] border-[#033B62] fixed bottom-[15px] right-[15px] text-[#033B62] cursor-pointer shadow-2xl shadow-blue-300 sm:p-[0.8rem] p-2 rounded-full z-50"
                     href="tel:080046533368"
                 >
                     <svg
@@ -39,7 +39,7 @@ function App() {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-6 h-6"
+                        className="sm:w-7 sm:h-7 w-6 h-6"
                     >
                         <path
                             strokeLinecap="round"

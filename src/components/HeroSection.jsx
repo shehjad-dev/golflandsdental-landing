@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Notyf } from "notyf";
 import "notyf/notyf.min.css";
-import heroOptimizedMax from "../assets/heroOptimizedMax.webp";
+import heroOptimizedMax from "../assets/heroImg.jpg";
 
 const HeroSection = () => {
     const notyf = new Notyf({

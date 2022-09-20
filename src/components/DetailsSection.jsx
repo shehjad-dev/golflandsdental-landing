@@ -1,6 +1,6 @@
 import React from "react";
 import FlashIcon from "../assets/FlashIcon.svg";
-import DetailsImage from "../assets/DescriptionImg.svg";
+import DetailsImage from "../assets/demoDetails3.svg";
 
 const DetailsSection = () => {
     return (
@@ -8,12 +8,12 @@ const DetailsSection = () => {
             <div className="px-4 pt-12 md:pb-12 pb-0 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24 md:scroll-mt-16 scroll-mt-14">
                 <div className="flex md:flex-row flex-col-reverse mx-auto max-w-4xl items-center justify-center">
                     <div className="flex flex-col items-start justify-center lg:mt-0 mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 md:mb-0 xl:mt-0">
-                        <span className="xl:mb-4 sm:mb-4 mb-4 text-xs font-bold tracking-widest flex sm:items-center items-start justify-center">
+                        <span className="xl:mb-4 sm:mb-4 mb-4 text-xs font-bold tracking-widest flex sm:items-center items-center justify-center">
                             {" "}
                             <img
                                 src={FlashIcon}
                                 alt="Teeth Flash Icon"
-                                className="text-blue-500 sm:w-10 h-auto mr-2 w-7 sm:mt-0 mt-[5px]"
+                                className="text-blue-500 sm:w-10 h-auto mr-2 w-7 sm:mt-0 mt-[0px]"
                             />
                             <p className="text-white sm:text-xl text-base">
                                 Best Solutions for Missing teeth
@@ -30,14 +30,14 @@ const DetailsSection = () => {
                             tooth is back to new.
                         </p>
                     </div>
-                    <div className="lg:max-w-lg md:w-1/2 w-[75%]  rounded-xl sm:ml-8 ml-0">
+                    <div className="lg:max-w-lg md:w-1/2 w-[100%] p-2 bg-white  rounded-xl sm:ml-8 ml-0">
                         <div className="">
                             <div className="relative w-full max-w-lg mx-auto">
                                 <div className="relative">
                                     <img
                                         src={DetailsImage}
                                         alt="Dental Implant Details Image"
-                                        className=""
+                                        className="overflow-hidden rounded-xl"
                                     />
                                 </div>
                             </div>
