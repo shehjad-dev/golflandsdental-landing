@@ -1,6 +1,6 @@
 import React from "react";
-import beforeTreatment from "../assets/demoBefore.jpeg";
-import afterTreatment from "../assets/demoAfter.jpeg";
+import beforeTreatment from "../assets/testBefore.png";
+import afterTreatment from "../assets/after.png";
 
 const BeforeAfterSection = () => {
     return (
@@ -11,12 +11,12 @@ const BeforeAfterSection = () => {
                 </h3>
                 <div className="flex sm:flex-row flex-col w-full sm:mt-16 mt-10 sm:mb-0 mb-6 sm:p-0 p-4 items-center justify-center gap-4">
                     <div className="">
-                        <div className="w-[250px] h-[355px] bg-[#74ACD0] backdrop-blur-lg bg-opacity-80 rounded-xl p-3 relative">
-                            <div className="w-full h-full rounded-xl bg-[#0697ff] absolute top-0 left-0 opacity-20"></div>
+                        <div className="w-[250px] h-[320px] bg-[#74ACD0] backdrop-blur-lg bg-opacity-80 rounded-xl p-3 relative">
+                            <div className="w-full h-full rounded-xl bg-[#0F75BC] absolute top-0 left-0 opacity-20"></div>
                             <img
                                 src={beforeTreatment}
                                 alt="Golflands Dental Patient Image before Dental Implant"
-                                className="w-full h-full rounded-xl z-40"
+                                className="w-full h-full rounded-xl"
                             />
                         </div>
                         <p className="text-[#0F75BC] text-center font-medium sm:text-lg text-base mt-2">
@@ -40,7 +40,7 @@ const BeforeAfterSection = () => {
                         </svg>
                     </div>
                     <div className="">
-                        <div className="w-[250px] h-[355px] bg-[#74ACD0] backdrop-blur-lg bg-opacity-80 rounded-xl p-3 relative">
+                        <div className="w-[250px] h-[320px] bg-[#74ACD0] backdrop-blur-lg bg-opacity-80 rounded-xl p-3 relative">
                             <div className="w-full h-full rounded-xl bg-[#0F75BC] absolute top-0 left-0 opacity-20"></div>
                             <img
                                 src={afterTreatment}
