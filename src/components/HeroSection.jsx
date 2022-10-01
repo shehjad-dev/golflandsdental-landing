@@ -65,7 +65,7 @@ const HeroSection = () => {
 
             axios
                 .post(
-                    `https://sheetdb.io/api/v1/${API_KEY}
+                    `https://sheetdb.io/api/v1/5lq2ndm34p46a
                 `,
                     {
                         data,
@@ -146,9 +146,19 @@ const HeroSection = () => {
                             </div>
                         </div>
 
-                        <p className="md:text-base text-[0.9rem] text-[#5f6061] sm:mt-3 mt-6 font-medium md:text-left text-center sm:font-semibold">
-                            Your deserve the perfect smile.
+                        <p className="md:text-base text-[0.9rem] text-[#5f6061] sm:mt-3 mt-6 font-medium md:text-left text-center sm:font-semibold sm:max-w-[200px] max-w-[270px]">
+                            Please send photos to{" "}
+                            <a
+                                href="mailto:info@golflandsdental.co.nz"
+                                className="text-blue-400"
+                            >
+                                info@golflandsdental.co.nz
+                            </a>{" "}
+                            for consulation.
                         </p>
+                        {/* <p className="md:text-base text-[0.9rem] text-[#5f6061] sm:mt-3 mt-6 font-medium md:text-left text-center sm:font-semibold">
+                            Your deserve the perfect smile.
+                        </p> */}
                     </div>
                     <div
                         className="lg:w-1/3 md:w-1/2 bg-[#0A629C] flex flex-col w-full md:py-8 mt-8 md:mt-0 rounded-xl sm:py-8 py-5 sm:px-6 px-4 shadow-lg scroll-mt-5"
